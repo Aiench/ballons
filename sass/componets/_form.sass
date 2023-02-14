@@ -1,0 +1,109 @@
+.book
+    height: 50rem
+    background: linear-gradient(124deg, rgba(252,254,255,0.8018557764902836) 41%, rgba(186,133,84,0.8018557764902836) 69%, rgba(0,0,0,0.7990546560421043) 100%), url('../img/pexels-taryn-elliott-3889725 1.jpg') center / cover no-repeat
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    overflow: hidden
+    
+
+.form
+    width: 80%
+    @include respond(tab-land)
+        width: 76%
+    @include respond(tab-port)
+        width: 100%
+    padding-top: 5rem
+    padding-left: 5rem
+    &__group:not(:last-child)
+        margin-bottom: 2rem
+    &__group:nth-child(4)
+        margin-bottom: 4rem
+    
+
+        
+    &:focus
+        outline: none
+        border-bottom: .2rem solid #66D763
+        box-shadow: $box-shadow
+        &:focus:invalid
+            border-bottom: .2rem solid #D76363
+        &__group:nth-child(4)
+            margin-bottom: 4rem
+            box-shadow: $box-shadow
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-3rem)
+    &__label
+        font-size: 1.6rem
+        letter-spacing: .2rem
+        font-weight: 400
+        display: block
+        margin-top: 1rem
+        margin-left: 1.5rem
+        transition: .7s all
+    &__input-radio
+        display: none
+    &__input
+        font-size: 1.6rem
+        letter-spacing: .2rem
+        font-weight: 400
+        color: $color-black
+        padding: 2rem 0rem 2rem 2rem
+        @include respond(tab-land)
+            padding: 1rem 0rem 2rem 2rem
+            box-shadow: $box-shadow
+        background: $color-white
+        border: none
+        border-bottom: .2rem solid transparent
+        border-radius: .5rem
+        width: 55%
+    &__group-radio
+        display: inline-block
+        &:not(:last-child)
+            margin-right: 2rem
+        @include respond(tab-land)
+            padding-top: 1rem
+            &:not(:last-child)
+                margin-bottom: 2.4rem
+
+            
+
+    &__label-radio
+        cursor: pointer
+        position: relative
+        padding-left: 4.5rem
+        @include respond(tab-port)
+            padding-left: 5.5rem
+            margin: 0 auto
+        width: 76%
+        color: $color-gray
+    &__button-radio
+        height: 3rem
+        width: 3rem
+        @include respond(tab-port)
+            height: 2.8rem
+            width: 2.8rem
+        border-radius: 50%
+        border: .5rem solid $color-brown-dark
+        display: block
+        position: absolute
+        left: 0rem
+        top: -0.4rem
+        &::after
+            content: ""
+            display: block
+            width: 1.5rem
+            height: 1.5rem
+            border-radius: 50% 
+            background: $color-brown-dark
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            opacity: 0
+            transition: .2s all
+    &__input-radio:checked ~ &__label-radio &__button-radio::after
+        opacity: 1
+        
+        
