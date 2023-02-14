@@ -63,6 +63,8 @@ body
     @include respond(tab-port)
         font-size: 2.6rem
         text-align: left
+    @include respond(phone)
+        text-align: center
     &:hover
         transform: skewY(2deg) skewX(15deg) scale(1.1)
         text-shadow: 0rem .4rem 4rem rgba($color-black, .25px)
