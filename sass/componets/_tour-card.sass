@@ -32,10 +32,10 @@
             background: linear-gradient(120deg, $color-brown-light, $color-brown-dark)
             @media only screen and (max-width: 900px), (hover:none)
                 transform: rotateY(0deg)
-                margin-top: -8rem
+                margin-top: -5rem
                 padding-top: 12rem
                 padding: 5rem
-                clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+                clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%)
 
 
     &:hover &__side_front
@@ -55,6 +55,9 @@
             background: $color-brown-light url(../img/card-2.jpg) center / cover no-repeat
         &_3
             background: $color-brown-light url(../img/card-3.jpg) center / cover no-repeat
+    .tour
+        @include respond(phone)
+            padding-left: 10rem
 
     &__title
         font-size: 2.8rem
@@ -85,6 +88,8 @@
             text-align: center
             @include respond(phone)
                 text-align: center 
+                padding-left: 3rem
+                padding-top: 2.5rem
             padding-top: 3rem
             li
                 font-size: 1.6rem

@@ -16,13 +16,17 @@
     
 
 .section-tour
+    .span
+        @include respond(phone)
+            padding-left: 11rem 
+           
     padding: 21rem
     @include respond(tab-land)
         padding: 14rem
     @include respond(tab-port)
         padding-top: 7rem 
     @include respond(phone)
-        padding-left: 7rem     
+        padding-left: 3rem     
     
 
 .section-feedback

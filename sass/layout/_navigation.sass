@@ -9,6 +9,8 @@
         position: fixed
         top: 10rem
         right: 10rem
+        @include respond(phone)
+            right: 6rem
         z-index: 200
         text-align: center
         cursor: pointer
@@ -21,6 +23,8 @@
         position: fixed
         right: 11rem
         top: 11rem
+        @include respond(phone)
+            right: 6rem
         z-index: 100
         transition: all .7s
         /* transform: scale(80) */
